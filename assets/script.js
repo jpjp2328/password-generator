@@ -14,6 +14,7 @@ function generatePassword() {
 
   if ((pwdLength < 8) || (pwdLength > 128)) {
     window.alert ("Password must be between 8 to 128 characters.");
+    exit();
   } 
   // Confirms if user wants to use special characters
   var confirmSpecial = confirm("Click OK to confirm including special characters.");
@@ -42,6 +43,7 @@ function generatePassword() {
   // Alerts user to select one character if none is select
   if (confirmSpecial === false && confirmNumbers === false && confirmLower === false && confirmUpper === false) {
     window.alert ("Please select one character type.")
+    exit();
   }
 
   // selects random from pwd pool that matches the password length
